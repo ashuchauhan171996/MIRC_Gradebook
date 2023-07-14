@@ -1,0 +1,76 @@
+{% extends 'common/base.html' %}
+{% block nav_links %}
+    <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/professor/course/{{ course_id }}/students">Students</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/professor/course/{{ course_id }}/evaluations">Evaluations</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/accounts/logout">Logout</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+    <div style="padding: 20px" class="col-md-12">
+        <div id="evaluation_div"></div>
+        <button id="add_evaluation_btn" href="{% url 'add_evaluation' course_id %}" type="button"
+                class="btn btn-primary">
+            Add Evaluation
+        </button>
+        <button id="add_grade_function_btn" href="{% url 'add_grade_function' course_id %}" type="button"
+                class="btn btn-primary">
+        Add Grade Function
+        </button>
+        <br><br>
+        <div class="table-responsive">
+            <table id="bootstrapdatatable" class="table table-striped table-bordered" width="100%">
+                <thead>
+                <th>Evaluation ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Weight</th>
+                <th>Maximum marks</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                </thead>
+                <tbody>
+                {% for evaluation in local_evaluations %}
+                    <tr>
+                        <td>{{ evaluation.id }}</td>
+                        <td>{{ evaluation.name }}</td>
+                        <td>{{ evaluation.eval_type }}</td>
+                        <td>{{ evaluation.weight }}</td>
+                        <td>{{ evaluation.max_marks }}</td>
+                        <td><a id="update_evaluation_btn"
+                               href="/professor/course/{{ course_id }}/evaluations/update/{{ evaluation.id }}"
+                               class="btn btn-primary"><i class="bi bi-pencil"></i></a></td>
+                        <td><a href="/professor/course/{{ course_id }}/evaluations/delete/{{ evaluation.id }}"
+                               class="btn btn-danger"><i class="bi bi-trash3"></i></a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+    {% if sum == 1 and grade_function %}
+        <button style="margin-left: 20px" type="submit"
+                onclick="location.href='/professor/course/{{ course_id }}/configure/submit'"
+                class="btn btn-primary">Submit
+        </button>
+    {% else %}
+        <button style="margin-left: 20px" type="submit" href="/professor/course/{{ course_id }}/configure/submit"
+                class="btn btn-primary"
+                disabled>Submit
+        </button>
+    {% endif %}
+    <br>
+    <br>
+    <i style="margin-left: 20px; color: red"> INFO: Please make sure to have sum of weights equal to 1 and Add Grade function to enable submit button.</i>
+{% endblock %}
