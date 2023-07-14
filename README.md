@@ -21,6 +21,9 @@ The main idea behind this project is to create an analytics-based prediction mod
 ### Project Links
 * [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/2598982)
 
+### Project Demo
+* [Youtube Demo Video](https://youtu.be/S1DYfxZa5-4)
+
 ### Iterations
 * [Iteration0](https://github.com/satish-reddy-tamu/MIRC-Gradebook/blob/main/documentation/Fall2022/i0.tar)
 * [Iteration1](https://github.com/satish-reddy-tamu/MIRC-Gradebook/blob/main/documentation/Fall2022/i1.tar)
@@ -38,3 +41,9 @@ This project uses Django Framework with python.
 ### Diagrams
 ![Final Er Diagram](documentation/diagrams/final_ER_diagram.png)
 ![Final Design Diagram](documentation/diagrams/final_design_diagram.png)
+![Final Design Diagram](documentation/diagrams/home.png)
+![Final Design Diagram](documentation/diagrams/prof_home.png)
+![Final Design Diagram](documentation/diagrams/prof_course.png)
+![Final Design Diagram](documentation/diagrams/student_home.png)
+![Final Design Diagram](documentation/diagrams/student_course.png)
+
