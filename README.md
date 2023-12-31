@@ -1,16 +1,6 @@
 # MIRC-Gradebook
 ## CSCE 606: Software Engineering Course Project
 
-### Team Name: Agile Sprinters
-
-### Members: 
-1.  [Ashutosh Chauhan](mailto:ashutosh@tamu.edu)
-2.	[Satish Kumar Reddy Madduri](mailto:satish_reddy@tamu.edu) 
-3.	[Pranav Anand Taukari](mailto:pranav.taukari@tamu.edu)  
-4.	[Vivek Vamsi Inala](mailto:vivekvamsi@tamu.edu)
-6.	[Sagar Adhikari](mailto:sagar0073@tamu.edu) 
-7.	[Harshavardhan Manne](mailto:harshavardhan_manne@tamu.edu)
-
 ### Clients:
 1. [Dr. Korok Ray](mailto:korok@tamu.edu)
 
